@@ -1,7 +1,7 @@
 # Face Detection Web App
 A simple django app to detect faces in an image using mediapipe and opencv.
-You can check out demo of this project [here](https://facedetectionapp-production.up.railway.app/).
-Please upload image files with any of the following formats:
+You can check out the demo of this project [here](https://facedetectionapp-production.up.railway.app/).
+Please upload image files of any of the following formats:
 * .jpeg
 * .jpg
 * .png
