@@ -5,7 +5,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = "django-insecure-!mftt20(x3043u_h!xex&ott%a%5f2w9-&&+ki7u#v1@h^et-*"
 
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['facedetectionapp-production.up.railway.app','https://facedetectionapp-production.up.railway.app']
 
