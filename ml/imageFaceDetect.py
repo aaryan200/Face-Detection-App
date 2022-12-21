@@ -5,7 +5,6 @@ def image_face_detector(path):
     ==========================
     """
     from os.path import join
-    import cv2
     from cv2 import imread, imwrite, resize
     from mediapipe import solutions
     from faceDetect.settings import MEDIA_ROOT
