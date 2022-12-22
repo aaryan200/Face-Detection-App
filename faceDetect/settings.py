@@ -9,7 +9,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['facedetectionapp-production.up.railway.app','https://facedetectionapp-production.up.railway.app']
 
-CSRF_TRUSTED_ORIGINS = ['https://facedetectionapp-production.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ['https://facedetectionapp-production.up.railway.app','https://facedetectionapp-production.up.railway.app/home']
 
 
 # Application definition
