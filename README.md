@@ -13,7 +13,7 @@ Major technologies used are mediapipe machine learning library, opencv and djang
 To run this app,
 * Update the system and clone this repository:
 ```bash
-apt-get update
+sudo apt-get update
 git clone https://github.com/aaryan200/face_detection_app.git
 ```
 * Head over to project directory and install all the dependencies.
@@ -25,7 +25,7 @@ pip install -r requirements.txt
 ```
 Note: You may have to install some additional dependcies, if they are not present on your system already.
 ```bash
-apt-get install ffmpeg libsm6 libxext6  -y
+sudo apt-get install ffmpeg libsm6 libxext6  -y
 ```
 * Run the app
 ```bash
