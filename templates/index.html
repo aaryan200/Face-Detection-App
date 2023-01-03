@@ -30,15 +30,17 @@
         <a class="btn btn-primary" href="" role="button">Upload Other Image</a>
     </div>
     {%else%}
-    <form method = 'POST' enctype="multipart/form-data" action="">
-        {% csrf_token %}
-        
-        <div class="form-group">
-            <label for="upload-img" class="upload">Upload the image:</label>
-            <input type="file" class="form-control-file" name="picture" accept="image/*" capture="camera">
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
+    <div class = "form">
+        <form method = 'POST' enctype="multipart/form-data" action="">
+            {% csrf_token %}
+
+            <div class="form-group">
+                <label for="upload-img" class="upload">Upload the image:</label>
+                <input type="file" class="form-control-file" name="picture" accept="image/*" capture="camera">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
     {%endif%}
     {%endif%}
 {% endblock %}
