@@ -18,7 +18,7 @@ git clone https://github.com/aaryan200/face_detection_app.git
 ```
 * Head over to project directory and install all the dependencies.
 ```bash
-cd face_detection_app/
+cd Face-Detection-App/
 ```
 ```bash
 pip install -r requirements.txt
