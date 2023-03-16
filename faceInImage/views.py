@@ -1,15 +1,16 @@
 from django.shortcuts import render,redirect
 from django.http import HttpResponse
 from os.path import join
+import subprocess
 from faceDetect.settings import MEDIA_ROOT,MEDIA_URL
 from faceInImage.forms import picForm
 from ml.imageFaceDetect import image_face_detector
 
-ct=0
 accepted_files = ['jpg','jpeg','png','jpe']
 
 # Main page
 def main_view(request,*args, **kwargs):
+    subprocess.call("rm -rf media/img/*", shell=True)
     """
     ==========================
     Main Page
@@ -24,11 +25,10 @@ def main_view(request,*args, **kwargs):
         if form.is_valid():
             pic = request.FILES['picture'].name
             ext = pic.split('.')[-1]
-            global ct,accepted_files
+            global accepted_files
             if ext in accepted_files:
-                fname=join('img', "image_%d.%s" % (ct, ext))
-                result_img = join("img","image_%d_result.%s" % (ct, ext))
-                ct+=1
+                fname=join('img', "image.%s" % (ext))
+                result_img = join("img","image_result.%s" % (ext))
                 form.save()
                 resize,faces = image_face_detector(join(MEDIA_ROOT,fname))
                 context['result_image']=result_img
